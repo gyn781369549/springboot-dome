@@ -8,7 +8,7 @@ public class ConnectionManager {
 	private static final String redis_host = "127.0.0.1";
 	private static final int redis_port = 6379;
 	private static final int redis_timeout = 2000;
-	private static final String redis_password = "1";
+	private static final String redis_password = "crs-g7wc0jdo:ks888888";
 
 	private static JedisPool pool;
 

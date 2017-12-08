@@ -36,10 +36,10 @@ public class Swagger2Configuration {
 
 	private ApiInfo apiInfo() {
 		return new ApiInfoBuilder()//
-				.title("龙果学院")// 标题
-				.description("spring boot 全集")// 描述
-				.termsOfServiceUrl("http://www.roncoo.com")//
-				.contact(new Contact("wujing", "http://www.roncoo.com", "297115770@qq.com"))// 联系
+				.title("标题")// 标题
+				.description(" 描述")// 描述
+				.termsOfServiceUrl("url")//
+				.contact(new Contact("wujing", "url", "邮箱"))// 联系
 				//.license("Apache License Version 2.0")// 开源协议
 				//.licenseUrl("https://github.com/springfox/springfox/blob/master/LICENSE")// 地址
 				.version("1.0")// 版本
