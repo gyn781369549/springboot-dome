@@ -1,22 +1,28 @@
 package com.roncoo.education.controller;
-import java.io.IOException;
-import java.io.OutputStream;
+
 
 import javax.servlet.http.HttpServletResponse;
 
 import org.apache.log4j.Logger;
 
-class ControllerUtil {
+
+import com.roncoo.education.util.net.ResponseUtils;
+
+@SuppressWarnings("all")
+public class ControllerUtil {
 	protected final Logger logger = Logger.getLogger(this.getClass());
 
-	protected void writeTo(byte[] by, HttpServletResponse response) throws IOException {
+	protected  static ResponseUtils responseUtils;
+	protected void writeTo(byte[] by, HttpServletResponse response){
 		
-		response.setContentType("application/x-protobuf");
-		OutputStream outputStream = response.getOutputStream();
-		outputStream.write(by);
-		outputStream.flush();
-		outputStream.close();
+		responseUtils.renderProtobuf(response, by);
 		
 	}
+	protected void writeTo(String json, HttpServletResponse response){
+		
+		responseUtils.renderJSON(response, json);
+		
+	}
+	
 
 }
