@@ -1,0 +1,7 @@
+option java_package = "com.roncoo.education.protobuf";//指定生产在protobuf包下
+option java_outer_classname = "UserProto";//指定生成对应java文件名
+message Response {  //自定义实体
+  required int32 id = 1;//同上  
+  optional int32 result = 2;
+  optional string info = 3;
+} 

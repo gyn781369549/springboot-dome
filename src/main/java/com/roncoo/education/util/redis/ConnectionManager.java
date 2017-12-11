@@ -23,6 +23,7 @@ public class ConnectionManager {
 		pool = new JedisPool(new JedisPoolConfig(), redis_host, redis_port, redis_timeout, redis_password);
 		Jedis jedis = pool.getResource();
 		jedis.set("a", "abc");
+		
 		System.out.println("redis中的值：" + jedis.get("a"));
 
 		closeConnection(jedis);

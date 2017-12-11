@@ -40,10 +40,12 @@ public class ApiController extends ControllerUtil {
 		return userMapper.selectByExample(te);
 	}
 
-	@ApiOperation(value = "selectId", notes = "通过id查找")
+	@ApiOperation(value = "selectIdwq", notes = "通过id查找")
 	@RequestMapping(value = "/selectIdwq", method = RequestMethod.POST)
 	public void selectIdwq(@RequestParam(defaultValue = "1") Integer id, HttpServletResponse response, boolean b)
 			throws IOException {
+		logger.info("进入info");
+		
 		User u = userMapper.selectByPrimaryKey(id);
 		UserProto.Response.Builder personBuilder = UserProto.Response.newBuilder();
 		personBuilder.setInfo(u.getName());

@@ -1,5 +1,4 @@
 package com.roncoo.education.util.configuration;
-
 import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceProperties;
@@ -22,6 +21,7 @@ public class DruidConfiguration {
 			DruidDataSource druidDataSource = (DruidDataSource) properties.initializeDataSourceBuilder().type(DruidDataSource.class).build();
 			DatabaseDriver databaseDriver = DatabaseDriver.fromJdbcUrl(properties.determineUrl());
 			String validationQuery = databaseDriver.getValidationQuery();
+		
 			if (validationQuery != null) {
 				druidDataSource.setValidationQuery(validationQuery);
 			}
