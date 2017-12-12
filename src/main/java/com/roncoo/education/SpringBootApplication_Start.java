@@ -20,11 +20,11 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 @SpringBootApplication
 @ImportResource(locations = { "classpath:druid-bean.xml" })
 @EnableTransactionManagement
-public class SpringBootStart {
-	public static Logger logger = Logger.getLogger(SpringBootStart.class);  
+public class SpringBootApplication_Start {
+	public static Logger logger = Logger.getLogger(SpringBootApplication_Start.class);  
 
 	public static void main(String[] args) {
-		SpringApplication.run(SpringBootStart.class, args);
+		SpringApplication.run(SpringBootApplication_Start.class, args);
 		logger.info("----------------------springboot启动成功！----------------------");
 	}
 

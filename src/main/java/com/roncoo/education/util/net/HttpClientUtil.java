@@ -317,7 +317,7 @@ public class HttpClientUtil {
 		json.put("cmd", 114);
 		json.put("player_token", "N5dEpKPw04hddy6bOzk2YCyeIbAzZNK8JjO3iiv%2FgAqnlOaLhotb2OeyYNSvFT3tZVPIZtbsBHg%3D");
 		
-		for (int i = 0; i < 1000; i++) {
+		for (int i = 0; i < 3000; i++) {
 			long ss=System.currentTimeMillis();
 			byte[] byteArray=post(url, json);
 			System.out.println("耗费:"+(System.currentTimeMillis()-ss)+"毫秒");
